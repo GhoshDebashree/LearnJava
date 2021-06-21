@@ -1,0 +1,61 @@
+class Bank{
+     int custId;
+     String custName;
+     String accType;
+     double deposit;
+     double amount;
+     double currentamount;
+     public Bank(){
+         custId = 111;
+         custName = "Debashree";
+         accType = "savings";
+         amount = 25000;
+    
+     }
+     public void display(){
+         System.out.println("Customer no : " +custId);
+         System.out.println("Customer name : " +custName);
+         System.out.println("Account type : " +accType);
+     }
+     public double depositAmount(double deposit){
+         currentamount = amount + deposit;
+         return currentamount;
+     }
+     public double withdrawAmount(double withdraw){
+         currentamount = amount-withdraw;
+         return currentamount;
+     }
+ }
+ 
+class SavingBank extends Bank{
+     double interest;
+     public SavingBank(){
+         interest = amount * 5/100;
+     }
+     public void displaySaving(){
+         System.out.println(interest);
+     }
+     
+ }
+ class CurrentBank extends Bank{
+     double interest;
+    public CurrentBank(){
+         interest = amount * 7/100;
+     }
+     public void displayCurrent(){
+         System.out.println(interest);
+     }
+ }
+ class Main{
+      public static void main(String[] args){
+         SavingBank obj1 = new SavingBank();
+         CurrentBank obj2 = new CurrentBank();
+         obj1.display();
+         System.out.println(obj1.depositAmount(1300.0));
+         System.out.println(obj1.withdrawAmount(1000.0));
+         obj1.displaySaving();
+         obj2.displayCurrent();
+     }
+ }
+ 
+     
