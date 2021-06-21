@@ -1,0 +1,27 @@
+class Shape{
+  public String name;
+  public Shape(){
+    name = "shape";
+  }
+  public String getName(){
+    return name;
+
+  }
+}
+
+class Circle extends Shape{
+  public String name;
+  public Circle(String name){
+    this.name = name;
+  }
+  public String getName(){
+    return "Super shape" +super.getName()+ "Circle shape" +this.name ;
+   
+  }
+}
+class Main{
+  public static void main(String args[]){
+    Circle obj = new Circle("circle");
+    obj.getName();
+  }
+}
