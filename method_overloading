@@ -1,0 +1,36 @@
+class Shape{
+    public double getArea(){
+        return 0;
+    }
+}
+ class Circle extends Shape{
+    int radius;
+    public Circle(int radius){
+        this.radius = radius;
+    }
+    public double getArea(){
+        double area = 3.14 * radius * radius;
+        return area;
+    }
+}
+ class Rectangle extends Shape{
+    int length;
+    int width;
+    public Rectangle(int length , int width){
+        this.length = length;
+        this.width = width;
+    }
+    public double getArea(){
+        double area = length * width;
+        return area;
+    }
+}
+ class Main{
+    public static void main(String[] args){
+        Shape shape[] = new Shape[2];
+        shape[0] = new Circle(4);
+        shape[1] = new Rectangle(5,5);
+        System.out.println("Area of the circle :" +shape[0].getArea());
+        System.out.println("Area of the circle :" +shape[1].getArea());
+    }  
+}
