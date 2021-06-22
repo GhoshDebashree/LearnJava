@@ -1,0 +1,33 @@
+class Bird{
+  public void eat(){
+    System.out.println(getClass().getSimpleName()+ "  is eating");
+  
+  }
+}
+
+interface CanFly{
+  public void fly();
+  
+}
+
+class Parrot extends Bird implements CanFly{
+  @Override
+  public void fly(){
+    System.out.println("Parrot can fly");
+  }
+}
+ class Swam extends Bird{
+   public void walk(){
+     System.out.println("Swam can walk");
+   }
+ }
+ class Main{
+   public static void main(String[] args){
+     Parrot p  = new Parrot();
+     Swam s  = new Swam();
+     p.fly();
+     p.eat();
+     s.walk();
+     s.eat();
+   } 
+ }
