@@ -1,0 +1,27 @@
+class Numbers{
+  static int n = 0;
+  public static void printData1(){
+    if (n<=10){
+      System.out.println(n+ " ");
+      n++;
+    }
+    else {
+            return;
+        }
+    printData2();
+  }
+  public static void printData2(){
+    if(n<=10){
+      System.out.println(n+ " ");
+      n++;
+    }
+    else {
+            return;
+        }
+    printData1();
+  }
+  public static void main(String args[]){
+    printData1();
+  }
+}
+  
