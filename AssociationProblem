@@ -1,0 +1,29 @@
+class Vehicle {
+  public int id;
+  public String model;
+
+  public Vehicle(int id, String model){
+     this.id = id;
+     this.model = model;
+   }
+}
+
+class Driver {
+   public String driverName;
+   public Vehicle vehicle;
+
+   public Driver(String driverName, Vehicle v){
+      this.driverName = driverName;
+      vehicle = v;
+   }  
+}
+
+class Main {
+  
+   public static void main(String args[]) {
+	    // Write your code here
+       Vehicle vehicle = new Vehicle(10, "XX10");
+       Driver driver = new Driver("John", vehicle);
+       System.out.println(driver.driverName+ " is driving the " + driver.vehicle.id  +  " id , " +driver.vehicle.model);
+   } 
+}
