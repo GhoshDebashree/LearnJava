@@ -1,0 +1,29 @@
+abstract class Car{
+  public abstract void mileage();
+  public void style(){
+    System.out.println(getClass().getSimpleName() + "is moving");
+  }
+}
+class BMW extends Car{
+  public void mileage(){
+    int distance = 18;
+  
+    System.out.println("BMW mileage is :" +distance);
+  }
+}
+class Mercedes extends Car{
+  public void mileage(){
+    int distance = 20;
+    System.out.println("Mercedes mileage is :" +distance);
+  }
+}
+class Main{
+  public static void main(String args[]){
+    BMW obj1 = new BMW();
+    Mercedes obj2 = new Mercedes();
+    obj1.mileage();
+    obj1.style();
+    obj2.mileage();
+    obj2.style();
+  }
+}
