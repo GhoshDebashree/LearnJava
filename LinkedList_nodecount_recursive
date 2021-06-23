@@ -1,0 +1,26 @@
+class Solution { 
+  
+    public static int lengthOfList(Node head) 
+    { 
+        if(head == null){
+            return 0;
+        }
+        else{
+            return 1 + lengthOfList(head.next);
+        }    
+    } 
+  
+    public static void main(String[] args) 
+    { 
+        /* Start with the empty list */
+        LinkedList llist = new LinkedList(); 
+        llist.push(1); 
+        llist.push(3); 
+        llist.push(1); 
+        llist.push(2); 
+        llist.push(1); 
+        llist.push(10);
+  
+        System.out.println("Count of nodes is = " + lengthOfList(llist.head)); 
+    } 
+} 
